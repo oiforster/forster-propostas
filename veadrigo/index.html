@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famiglia Veadrigo — Proposta Forster Filmes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.slide').forEach(s => observer.observe(s));
+    });
+  </script>
+</head>
+<body>
+
+  <!-- SLIDE 1 — CAPA -->
+  <section class="slide slide--cover" id="capa">
+    <div class="slide__bg" style="background-image: url('assets/img/19_Banner_Le_Donne.jpg')"></div>
+    <div class="slide__overlay"></div>
+    <div class="slide__content slide__content--center">
+      <p class="slide__eyebrow">Proposta Audiovisual</p>
+      <h1 class="slide__title slide__title--hero">Famiglia Veadrigo</h1>
+      <p class="slide__subtitle">100 Anos de História</p>
+      <div class="slide__badge">Forster Filmes — 2026</div>
+    </div>
+    <div class="scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- SLIDE 2 — QUEM SOMOS -->
+  <section class="slide slide--split" id="quem-somos">
+    <div class="slide__image-half">
+      <img src="assets/img/forster-equipe.jpg" alt="Samuel e Silvana Forster" onerror="this.style.display='none'">
+      <div class="slide__image-half-fallback"></div>
+    </div>
+    <div class="slide__text-half">
+      <p class="slide__eyebrow">Quem somos</p>
+      <h2 class="slide__title">A Forster Filmes é uma produtora feita por quem acredita que o trabalho se adapta à vida — e não o contrário.</h2>
+      <p class="slide__body">Contamos histórias reais de empresas que, como a nossa, são construídas em família.</p>
+      <div class="slide__credits">
+        <p><strong>Samuel Forster</strong> — Direção, captação e edição</p>
+        <p><strong>Silvana Forster</strong> — Roteiro e estratégia de conteúdo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 — POR QUE AGORA -->
+  <section class="slide slide--fullimg" id="por-que">
+    <div class="slide__bg" style="background-image: url('assets/img/16_Nona_Maria.jpg')"></div>
+    <div class="slide__overlay slide__overlay--heavy"></div>
+    <div class="slide__content slide__content--bottom-left">
+      <p class="slide__eyebrow">O projeto</p>
+      <h2 class="slide__title">Por que contar<br>essa história agora</h2>
+      <div class="slide__body slide__body--columns">
+        <p>Em 2027, a Famiglia Veadrigo completa 100 anos de história com o vinho. Quatro gerações, lideradas por mulheres, construíram uma vinícola que nunca parou — mesmo quando tudo dizia para parar.</p>
+        <p>Esse é o momento de registrar essa história antes que ela exista apenas na memória. É o primeiro vídeo institucional da vinícola. E precisa estar à altura de tudo que veio antes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4 — O QUE ENTREGAREMOS -->
+  <section class="slide slide--dark" id="entregas">
+    <div class="slide__bg slide__bg--subtle" style="background-image: url('assets/img/01_Familia_atual.jpg')"></div>
+    <div class="slide__overlay slide__overlay--dark"></div>
+    <div class="slide__content slide__content--center">
+      <p class="slide__eyebrow">O que entregaremos</p>
+      <h2 class="slide__title">Um projeto à altura<br>de 100 anos</h2>
+      <div class="deliverables">
+        <div class="deliverable">
+          <span class="deliverable__number">4</span>
+          <p class="deliverable__label">Episódios</p>
+          <p class="deliverable__desc">Websérie "4 Gerações" — um episódio por geração, ~2 min cada</p>
+        </div>
+        <div class="deliverable">
+          <span class="deliverable__number">1</span>
+          <p class="deliverable__label">Compilado</p>
+          <p class="deliverable__desc">Versão única (~4 min) para eventos, enoturismo e registro histórico</p>
+        </div>
+        <div class="deliverable">
+          <span class="deliverable__number">+</span>
+          <p class="deliverable__label">Conteúdo Social</p>
+          <p class="deliverable__desc">Material captado separadamente para redes sociais — não é recorte do institucional</p>
+        </div>
+      </div>
+      <p class="slide__footnote">O número 4 é temático em toda a celebração: 4 gerações, 4 vinhos, 4 safras.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 5 — COMO TRABALHAMOS -->
+  <section class="slide slide--split slide--split-reverse" id="como">
+    <div class="slide__text-half">
+      <p class="slide__eyebrow">Como trabalhamos</p>
+      <h2 class="slide__title">Primeiro a gente entende.<br>Depois a gente grava.</h2>
+      <div class="process">
+        <div class="process__step">
+          <span class="process__number">01</span>
+          <div>
+            <p class="process__title">Imersão</p>
+            <p class="process__desc">Um dia inteiro na vinícola. Conhecer a família, sentir o espírito, almoçar junto. Sem câmera.</p>
+          </div>
+        </div>
+        <div class="process__step">
+          <span class="process__number">02</span>
+          <div>
+            <p class="process__title">Roteiro</p>
+            <p class="process__desc">Construído a quatro mãos por Samuel e Silvana, orientado por Eduardo e Fabiane. Rodadas de aprovação até ficar redondo.</p>
+          </div>
+        </div>
+        <div class="process__step">
+          <span class="process__number">03</span>
+          <div>
+            <p class="process__title">Captação</p>
+            <p class="process__desc">3 diárias de 8h cada, distribuídas ao longo de ~10 meses. Institucional e social captados separadamente.</p>
+          </div>
+        </div>
+        <div class="process__step">
+          <span class="process__number">04</span>
+          <div>
+            <p class="process__title">Entrega</p>
+            <p class="process__desc">Edição, pós-produção e entrega de todo o material — alinhado com a celebração dos 100 anos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide__image-half">
+      <img src="assets/img/09_Fabiane_enologa.jpg" alt="Fabiane Veadrigo na parreira">
+    </div>
+  </section>
+
+  <!-- SLIDE 6 — CRONOGRAMA -->
+  <section class="slide slide--dark" id="cronograma">
+    <div class="slide__bg slide__bg--subtle" style="background-image: url('assets/img/07_Vinhedos.jpg')"></div>
+    <div class="slide__overlay slide__overlay--dark"></div>
+    <div class="slide__content slide__content--center">
+      <p class="slide__eyebrow">Cronograma</p>
+      <h2 class="slide__title">A história levou 100 anos<br>para ser construída.<br>Não precisa ter pressa.</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__date">Abr — Mai 2026</span>
+          <p class="timeline__label">Visita de imersão</p>
+        </div>
+        <div class="timeline__line"></div>
+        <div class="timeline__item">
+          <span class="timeline__date">Mai — Jul 2026</span>
+          <p class="timeline__label">Construção do roteiro</p>
+        </div>
+        <div class="timeline__line"></div>
+        <div class="timeline__item">
+          <span class="timeline__date">Ago — Nov 2026</span>
+          <p class="timeline__label">Diárias 1 e 2</p>
+        </div>
+        <div class="timeline__line"></div>
+        <div class="timeline__item">
+          <span class="timeline__date">Jan — Fev 2027</span>
+          <p class="timeline__label">Diária 3 — safra</p>
+        </div>
+        <div class="timeline__line"></div>
+        <div class="timeline__item">
+          <span class="timeline__date">Mar 2027</span>
+          <p class="timeline__label">Entrega final</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7 — INVESTIMENTO -->
+  <section class="slide slide--dark" id="investimento">
+    <div class="slide__bg slide__bg--subtle" style="background-image: url('assets/img/08_Fernandes_cave.jpg')"></div>
+    <div class="slide__overlay slide__overlay--dark"></div>
+    <div class="slide__content slide__content--center">
+      <p class="slide__eyebrow">Investimento</p>
+      <h2 class="slide__title">O que está incluso</h2>
+      <ul class="invest-list">
+        <li>Visita de imersão presencial em Flores da Cunha (1 dia)</li>
+        <li>Construção de roteiro por Samuel e Silvana Forster, com rodadas de aprovação</li>
+        <li>3 diárias de captação (8h cada), distribuídas ao longo de ~10 meses</li>
+        <li>Deslocamento e hospedagem quando necessário</li>
+        <li>Edição e entrega da websérie completa (4 episódios), conteúdo para redes sociais e versão compilada</li>
+      </ul>
+      <div class="invest-total">
+        <p class="invest-total__label">Projeto completo</p>
+        <p class="invest-total__value">R$ 37.000</p>
+      </div>
+      <p class="slide__quote">Esse é o projeto que faz jus aos 100 anos da família.<br>Se precisarmos ajustar o escopo, conversamos.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 8 — PRÓXIMOS PASSOS -->
+  <section class="slide slide--split" id="proximos-passos">
+    <div class="slide__image-half">
+      <img src="assets/img/15_Nono_Joao.jpg" alt="Nono João Veadrigo">
+    </div>
+    <div class="slide__text-half">
+      <p class="slide__eyebrow">Próximos passos</p>
+      <h2 class="slide__title">O que acontece<br>quando vocês disserem sim</h2>
+      <div class="steps">
+        <div class="steps__item">
+          <span class="steps__number">1</span>
+          <p>Alinhamento de expectativas e assinatura</p>
+        </div>
+        <div class="steps__item">
+          <span class="steps__number">2</span>
+          <p>Agendamos a visita de imersão em Flores da Cunha</p>
+        </div>
+        <div class="steps__item">
+          <span class="steps__number">3</span>
+          <p>Construção do roteiro a quatro mãos</p>
+        </div>
+        <div class="steps__item">
+          <span class="steps__number">4</span>
+          <p>Captação em etapas ao longo do ano</p>
+        </div>
+        <div class="steps__item">
+          <span class="steps__number">5</span>
+          <p>Entrega alinhada com a celebração dos 100 anos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9 — ENCERRAMENTO -->
+  <section class="slide slide--cover" id="encerramento">
+    <div class="slide__bg" style="background-image: url('assets/img/18_Criancas_antigas.jpg')"></div>
+    <div class="slide__overlay slide__overlay--heavy"></div>
+    <div class="slide__content slide__content--center">
+      <h2 class="slide__title slide__title--hero">Histórias precisam<br>ser contadas.</h2>
+      <p class="slide__subtitle">Vamos contar a de vocês.</p>
+      <div class="contact">
+        <p class="contact__name">Forster Filmes</p>
+        <p class="contact__detail">Samuel Forster</p>
+        <p class="contact__detail">samuel@forsterfilmes.com</p>
+        <p class="contact__detail">(51) 98157-8225</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
