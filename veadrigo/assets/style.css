@@ -131,6 +131,21 @@ img {
   background-position: center 10%;
 }
 
+#encerramento .slide__content {
+  justify-content: flex-end;
+  padding-bottom: 5rem;
+}
+
+#encerramento .slide__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.05) 35%,
+    rgba(0, 0, 0, 0.6) 75%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
 .slide__overlay {
   position: absolute;
   inset: 0;
@@ -485,6 +500,13 @@ img {
   font-weight: 600;
   color: #fff;
   letter-spacing: -0.02em;
+}
+
+.invest-total__payment {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.75rem;
+  text-wrap: balance;
 }
 
 /* --- Steps --- */
