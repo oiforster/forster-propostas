@@ -122,9 +122,13 @@ img {
   opacity: 0.55;
 }
 
-/* Nona Maria — nunca cortar a cabeça */
+/* Nunca cortar cabeças nas fotos */
 #por-que .slide__bg {
   background-position: center 15%;
+}
+
+#encerramento .slide__bg {
+  background-position: center 10%;
 }
 
 .slide__overlay {
