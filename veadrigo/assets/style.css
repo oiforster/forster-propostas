@@ -183,6 +183,22 @@ img {
   gap: 0;
 }
 
+/* Capa — texto no terço inferior, foto respira em cima */
+#capa .slide__content {
+  justify-content: flex-end;
+  padding-bottom: 6rem;
+}
+
+#capa .slide__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.05) 40%,
+    rgba(0, 0, 0, 0.6) 85%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
 .slide__badge {
   font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
