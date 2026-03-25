@@ -122,9 +122,9 @@ img {
   opacity: 0.55;
 }
 
-/* Nunca cortar cabeças nas fotos */
+/* Nona Maria — rosto na direita, texto na esquerda */
 #por-que .slide__bg {
-  background-position: center 15%;
+  background-position: 65% 15%;
 }
 
 #encerramento .slide__bg {
