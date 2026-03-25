@@ -210,6 +210,7 @@ img {
 .slide--split {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100vh;
   background: #0a0a0a;
 }
 
@@ -225,6 +226,11 @@ img {
   position: relative;
   overflow: hidden;
   background: #111;
+  height: 100vh;
+}
+
+.slide__image-half img {
+  object-position: center 20%;
 }
 
 .slide__image-half-fallback {
@@ -250,6 +256,7 @@ img {
 
 .slide__text-half .slide__body {
   color: rgba(255, 255, 255, 0.65);
+  max-width: none;
 }
 
 .slide__credits {
