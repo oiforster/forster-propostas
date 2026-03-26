@@ -661,12 +661,16 @@ img {
   }
 
   .slide {
-    min-height: auto;
+    min-height: 100vh;
   }
 
   .slide--split {
     grid-template-columns: 1fr;
     height: auto;
+    min-height: auto;
+  }
+
+  .slide--dark {
     min-height: auto;
   }
 
@@ -742,6 +746,16 @@ img {
 
   .slide__title--hero {
     font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  /* Slide fullimg — texto mais leve no mobile */
+  .slide--fullimg .slide__body {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .slide--fullimg .slide__content {
+    padding-top: 40vh;
   }
 
   /* Encerramento — foto mais escura no mobile */
