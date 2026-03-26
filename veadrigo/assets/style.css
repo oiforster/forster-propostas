@@ -124,11 +124,11 @@ img {
 
 /* Entregas — imagem sutil, números protagonistas */
 #entregas .slide__bg--subtle {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 #entregas .slide__overlay--dark {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 /* Nona Maria — rosto na direita, texto na esquerda */
@@ -755,6 +755,12 @@ img {
 
   .slide__title--hero {
     font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  /* Capa — forçar tela cheia no mobile */
+  .slide--cover {
+    height: 100vh;
+    min-height: 100vh;
   }
 
   /* Slide fullimg — texto mais leve no mobile */
