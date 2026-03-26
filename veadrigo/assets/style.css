@@ -646,13 +646,17 @@ img {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
+  }
+
+  .slide {
+    min-height: auto;
   }
 
   .slide--split {
     grid-template-columns: 1fr;
     height: auto;
-    min-height: 100vh;
+    min-height: auto;
   }
 
   .slide--split-reverse {
@@ -660,11 +664,11 @@ img {
   }
 
   .slide__image-half {
-    height: 45vh;
+    height: 50vh;
   }
 
   .slide__text-half {
-    padding: 2.5rem 1.5rem 3rem;
+    padding: 2rem 1.5rem 3rem;
   }
 
   .slide__credits {
@@ -672,49 +676,83 @@ img {
   }
 
   .slide__content {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
   .slide__content--bottom-left {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 
   .slide__body--columns {
     columns: 1;
   }
 
+  /* Entregas — compactar no mobile */
   .deliverables {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
   }
 
+  .deliverable {
+    padding: 1rem;
+  }
+
+  .deliverable__number {
+    font-size: 2.5rem;
+  }
+
+  .slide__footnote {
+    margin-top: 1.5rem;
+  }
+
+  /* Timeline */
   .timeline {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
+    margin-top: 2rem;
   }
 
   .timeline__line {
     width: 1px;
-    height: 24px;
+    height: 16px;
     margin: 0 auto;
   }
 
   .timeline__item {
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
+  }
+
+  /* Títulos menores no mobile */
+  .slide__title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
   }
 
   .slide__title--hero {
     font-size: clamp(2rem, 8vw, 3rem);
   }
+
+  /* Encerramento — foto mais escura no mobile */
+  #encerramento .slide__bg {
+    filter: brightness(0.6);
+  }
+
+  #encerramento .slide__content {
+    padding-bottom: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
   .slide__text-half {
-    padding: 2rem 1.25rem;
+    padding: 1.5rem 1.25rem 2.5rem;
   }
 
   .slide__content {
-    padding: 2rem 1.25rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .slide__title {
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
   }
 }
