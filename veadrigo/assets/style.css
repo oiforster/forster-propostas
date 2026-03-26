@@ -122,6 +122,15 @@ img {
   opacity: 0.55;
 }
 
+/* Entregas — imagem sutil, números protagonistas */
+#entregas .slide__bg--subtle {
+  opacity: 0.3;
+}
+
+#entregas .slide__overlay--dark {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 /* Nona Maria — rosto na direita, texto na esquerda */
 #por-que .slide__bg {
   background-position: 65% 15%;
