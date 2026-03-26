@@ -198,19 +198,23 @@ img {
   gap: 0;
 }
 
-/* Capa — texto no terço inferior, foto respira em cima */
+/* Capa — texto no fundo, foto respira em cima */
 #capa .slide__content {
   justify-content: flex-end;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
+}
+
+#capa .slide__bg {
+  filter: brightness(0.8);
 }
 
 #capa .slide__overlay {
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.05) 40%,
-    rgba(0, 0, 0, 0.6) 85%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.7) 80%,
+    rgba(0, 0, 0, 0.9) 100%
   );
 }
 
