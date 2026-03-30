@@ -18,8 +18,19 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* --- Focus & Accessibility --- */
+a:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.scroll-hint {
+  aria-hidden: true;
+}
+
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 400;
   color: #1d1d1f;
   background: #000;
@@ -35,7 +46,7 @@ img {
 
 /* --- Typography --- */
 .slide__eyebrow {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -60,7 +71,7 @@ img {
 }
 
 .slide__subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: clamp(1rem, 1.8vw, 1.4rem);
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
@@ -103,6 +114,7 @@ img {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,6 +128,12 @@ img {
   background-size: cover;
   background-position: center;
   z-index: 0;
+  transform: scale(1.04);
+  transition: transform 1.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.slide.is-visible .slide__bg {
+  transform: scale(1);
 }
 
 .slide__bg--subtle {
@@ -228,7 +246,7 @@ img {
 }
 
 .slide__badge {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -270,12 +288,8 @@ img {
   background: #0a0a0a;
 }
 
-.slide--split-reverse {
-  direction: rtl;
-}
-
-.slide--split-reverse > * {
-  direction: ltr;
+.slide--split-reverse .slide__image-half {
+  order: -1;
 }
 
 .slide__image-half {
@@ -508,9 +522,9 @@ img {
 }
 
 .invest-total__value {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
   color: #fff;
   letter-spacing: -0.02em;
 }
@@ -559,7 +573,7 @@ img {
 }
 
 .contact__name {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -602,8 +616,8 @@ img {
 .slide__footnote,
 .contact {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(12px);
+  transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .slide.is-visible .slide__eyebrow,
@@ -663,14 +677,58 @@ img {
 .slide.is-visible .steps__item:nth-child(4) { transition-delay: 0.6s; }
 .slide.is-visible .steps__item:nth-child(5) { transition-delay: 0.7s; }
 
+/* --- Noise Texture --- */
+.slide--dark::after,
+.slide--cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .slide__bg {
+    transform: none;
+  }
+
+  .slide__eyebrow,
+  .slide__title,
+  .slide__subtitle,
+  .slide__body,
+  .slide__badge,
+  .deliverable,
+  .process__step,
+  .timeline__item,
+  .invest-list li,
+  .steps__item,
+  .slide__credits,
+  .invest-total,
+  .slide__quote,
+  .slide__footnote,
+  .contact {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: none;
   }
 
   .slide {
-    min-height: 100vh;
+    min-height: auto;
   }
 
   .slide--split {
@@ -683,8 +741,8 @@ img {
     min-height: auto;
   }
 
-  .slide--split-reverse {
-    direction: ltr;
+  .slide--split-reverse .slide__image-half {
+    order: 0;
   }
 
   .slide__image-half {
@@ -760,7 +818,9 @@ img {
   /* Capa — forçar tela cheia no mobile */
   .slide--cover {
     height: 100vh;
+    height: 100svh;
     min-height: 100vh;
+    min-height: 100svh;
   }
 
   /* Slide fullimg — texto mais leve no mobile */
