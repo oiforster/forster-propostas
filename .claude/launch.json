@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8080", "-d", "veadrigo"],
       "port": 8080
+    },
+    {
+      "name": "casa-marco",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8081", "-d", "casa-marco"],
+      "port": 8081
     }
   ]
 }
