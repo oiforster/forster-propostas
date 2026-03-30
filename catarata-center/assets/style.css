@@ -757,6 +757,35 @@ img {
     padding: 2rem 1.5rem 3rem;
   }
 
+  /* "Por que funciona?" — fundo claro no mobile */
+  #funciona {
+    background: #f8f8f8;
+  }
+
+  #funciona .slide__text-half .slide__eyebrow {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  #funciona .slide__text-half .slide__title {
+    color: #1d1d1f;
+  }
+
+  #funciona .process__number {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  #funciona .process__title {
+    color: #1d1d1f;
+  }
+
+  #funciona .process__desc {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  #funciona .process__step {
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+  }
+
   .slide__credits {
     margin-bottom: 1rem;
   }
