@@ -12,6 +12,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8081", "-d", "casa-marco"],
       "port": 8081
+    },
+    {
+      "name": "olimoveis",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8082", "-d", "olimoveis"],
+      "port": 8082
     }
   ]
 }
