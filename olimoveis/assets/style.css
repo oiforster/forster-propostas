@@ -292,7 +292,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-  background: #424242;
+  background: #212121;
 }
 
 .slide--split-reverse .slide__image-half {
@@ -312,6 +312,8 @@ img {
 
 #processo .slide__image-half img {
   object-position: center center;
+  transform: scale(1.15);
+  transform-origin: 40% center;
 }
 
 .slide__text-half {
