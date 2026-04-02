@@ -292,7 +292,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-  background: #0a0a0a;
+  background: linear-gradient(135deg, #1a1c2e 0%, #2a2d3e 40%, #1e2130 100%);
 }
 
 .slide--split-reverse .slide__image-half {
