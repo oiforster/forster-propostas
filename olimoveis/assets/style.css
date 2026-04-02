@@ -292,7 +292,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-  background: linear-gradient(135deg, #1a1c2e 0%, #2a2d3e 40%, #1e2130 100%);
+  background: #424242;
 }
 
 .slide--split-reverse .slide__image-half {
@@ -352,13 +352,34 @@ img {
 }
 
 /* --- Deliverables --- */
-.deliverables {
+.deliverables-split {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   gap: 2rem;
   margin-top: 3rem;
   max-width: 960px;
   width: 100%;
+  align-items: center;
+}
+
+.deliverables-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.deliverables-left .deliverable--featured {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.deliverables-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .deliverable {
@@ -599,11 +620,11 @@ img {
 .slide.is-visible .slide__quote { transition-delay: 0.8s; }
 .slide.is-visible .projeto-columns { transition-delay: 0.5s; }
 
-.slide.is-visible .deliverable:nth-child(1) { transition-delay: 0.3s; }
-.slide.is-visible .deliverable:nth-child(2) { transition-delay: 0.4s; }
-.slide.is-visible .deliverable:nth-child(3) { transition-delay: 0.5s; }
-.slide.is-visible .deliverable:nth-child(4) { transition-delay: 0.6s; }
-.slide.is-visible .deliverable:nth-child(5) { transition-delay: 0.7s; }
+.slide.is-visible .deliverables-left .deliverable { transition-delay: 0.3s; }
+.slide.is-visible .deliverables-right .deliverable:nth-child(1) { transition-delay: 0.4s; }
+.slide.is-visible .deliverables-right .deliverable:nth-child(2) { transition-delay: 0.5s; }
+.slide.is-visible .deliverables-right .deliverable:nth-child(3) { transition-delay: 0.6s; }
+.slide.is-visible .deliverables-right .deliverable:nth-child(4) { transition-delay: 0.7s; }
 
 .slide.is-visible .process__step:nth-child(1) { transition-delay: 0.3s; }
 .slide.is-visible .process__step:nth-child(2) { transition-delay: 0.4s; }
@@ -713,11 +734,16 @@ img {
     gap: 1.5rem;
   }
 
-  /* Entregas — 1 coluna no mobile */
-  .deliverables {
+  /* Entregas — empilha no mobile */
+  .deliverables-split {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 1.5rem;
+  }
+
+  .deliverables-right {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .deliverable {
