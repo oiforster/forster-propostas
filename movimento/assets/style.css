@@ -631,9 +631,12 @@ img {
 
 .timeline__marker {
   flex-shrink: 0;
+  align-self: stretch;
   width: 5.5rem;
-  text-align: right;
-  padding-top: 0.18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .timeline__period {
@@ -659,7 +662,8 @@ img {
 
 .timeline__content {
   flex: 1;
-  padding-left: 1rem;
+  padding-left: 2.5rem;
+  text-align: left;
 }
 
 .timeline__title {
@@ -669,6 +673,7 @@ img {
   color: rgba(255, 255, 255, 0.88);
   margin-bottom: 0.35rem;
   letter-spacing: 0.01em;
+  text-align: left;
 }
 
 .timeline__desc {
@@ -678,6 +683,7 @@ img {
   max-width: 440px;
   text-wrap: pretty;
   text-decoration: none;
+  text-align: left;
 }
 
 /* --- Por que funciona (Section 6) --- */
