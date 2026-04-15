@@ -677,6 +677,7 @@ img {
   line-height: 1.65;
   max-width: 440px;
   text-wrap: pretty;
+  text-decoration: none;
 }
 
 /* --- Por que funciona (Section 6) --- */
@@ -1090,6 +1091,10 @@ img {
 
   .timeline__content {
     padding-left: 0;
+  }
+
+  .timeline__title {
+    font-size: 1rem;
   }
 
   .compare-table th,
