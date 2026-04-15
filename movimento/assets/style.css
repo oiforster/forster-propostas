@@ -86,8 +86,8 @@ img {
 
 .slide__title--hero {
   font-size: clamp(2.8rem, 6vw, 5rem);
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .slide__title--dark {
@@ -98,7 +98,7 @@ img {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.05rem, 2vw, 1.4rem);
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.01em;
   text-wrap: balance;
@@ -152,7 +152,7 @@ img {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.3);
   margin-top: 3rem;
-  font-style: italic;
+  font-style: normal;
 }
 
 .slide__footnote--dark {
@@ -379,14 +379,39 @@ img {
   50%       { opacity: 0.9;  transform: scaleY(1); }
 }
 
-/* --- Quem somos (Section 2) --- */
+/* --- Quem somos (Section 2) — creme bg, dark text --- */
 #quem-somos {
   background: var(--creme);
 }
 
-#quem-somos .slide__content {
-  max-width: 760px;
-  gap: 0;
+#quem-somos .slide__text-half {
+  background: var(--creme);
+}
+
+#quem-somos .slide__text-half .slide__eyebrow {
+  color: var(--text-light);
+}
+
+#quem-somos .slide__text-half .slide__title {
+  color: var(--text);
+}
+
+#quem-somos .slide__text-half .slide__body {
+  color: var(--text-muted);
+}
+
+#quem-somos .slide__credits {
+  border-top-color: var(--creme-border);
+}
+
+#quem-somos .slide__credits p {
+  color: var(--text-light);
+  text-align: left;
+}
+
+#quem-somos .slide__credits strong {
+  color: var(--verde-dark);
+  font-weight: 600;
 }
 
 .slide__credits {
@@ -504,9 +529,9 @@ img {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 2rem;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.55;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .option-card__section-title {
@@ -661,8 +686,8 @@ img {
 }
 
 #por-que .slide__title--hero {
-  font-style: italic;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
   font-size: clamp(1.8rem, 4vw, 3rem);
   margin-bottom: 2.5rem;
   max-width: 760px;
@@ -762,8 +787,8 @@ img {
 }
 
 .compare-table .row-price .cell-feature {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-style: italic;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-style: normal;
   font-size: 0.88rem;
   color: var(--text-muted);
 }
