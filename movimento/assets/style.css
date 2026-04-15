@@ -40,7 +40,7 @@ a:focus-visible {
 }
 
 body {
-  font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
   color: var(--text);
   background: var(--creme);
@@ -56,7 +56,7 @@ img {
 
 /* --- Typography --- */
 .slide__eyebrow {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -75,7 +75,7 @@ img {
 }
 
 .slide__title {
-  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.15;
@@ -95,7 +95,7 @@ img {
 }
 
 .slide__subtitle {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.05rem, 2vw, 1.4rem);
   font-weight: 400;
   font-style: italic;
@@ -105,7 +105,7 @@ img {
 }
 
 .slide__support {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.88rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.45);
@@ -114,7 +114,7 @@ img {
 }
 
 .slide__body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 1.05rem;
   line-height: 1.78;
   color: rgba(255, 255, 255, 0.7);
@@ -148,7 +148,7 @@ img {
 }
 
 .slide__footnote {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.3);
   margin-top: 3rem;
@@ -160,7 +160,7 @@ img {
 }
 
 .slide__quote {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: italic;
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.5);
@@ -174,7 +174,7 @@ img {
 }
 
 .slide__badge {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -275,6 +275,65 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* --- Split Layout (Quem somos) --- */
+.slide--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  height: 100svh;
+  background: #1E1C18;
+}
+
+.slide__image-half {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  height: 100vh;
+  height: 100svh;
+}
+
+.slide__image-half img {
+  object-position: center 20%;
+}
+
+.slide__text-half {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 5rem;
+}
+
+.slide__text-half .slide__eyebrow {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.slide__text-half .slide__title {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  color: #fff;
+}
+
+.slide__text-half .slide__body {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: none;
+}
+
+.slide--split .slide__credits {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: auto;
+}
+
+.slide--split .slide__credits p {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: left;
+}
+
+.slide--split .slide__credits strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
 }
 
 /* --- Hero (capa) specifics --- */
@@ -423,7 +482,7 @@ img {
 }
 
 .option-card__label {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -433,7 +492,7 @@ img {
 }
 
 .option-card__title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--text);
@@ -447,7 +506,7 @@ img {
   margin-bottom: 2rem;
   font-style: italic;
   line-height: 1.55;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .option-card__section-title {
@@ -496,7 +555,7 @@ img {
 }
 
 .option-card__price-value {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--text);
@@ -553,7 +612,7 @@ img {
 }
 
 .timeline__period {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.78rem;
   color: var(--dourado);
   opacity: 0.75;
@@ -579,7 +638,7 @@ img {
 }
 
 .timeline__title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.88);
@@ -642,7 +701,7 @@ img {
 
 .compare-table th {
   padding: 1rem 1.5rem;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -703,7 +762,7 @@ img {
 }
 
 .compare-table .row-price .cell-feature {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: italic;
   font-size: 0.88rem;
   color: var(--text-muted);
@@ -721,7 +780,7 @@ img {
 }
 
 .compare-price {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text);
@@ -761,7 +820,7 @@ img {
 }
 
 .contact__name {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.24em;
@@ -907,6 +966,20 @@ img {
   .slide--dark {
     min-height: auto;
     padding: 3.5rem 0;
+  }
+
+  .slide--split {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .slide__image-half {
+    height: 50vh;
+  }
+
+  .slide__text-half {
+    padding: 2rem 1.5rem 3rem;
   }
 
   .slide__content {

@@ -23,7 +23,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 
   <script defer>
@@ -43,10 +43,9 @@
 
   <!-- SEÇÃO 1 — HERO -->
   <section class="slide slide--cover" id="capa">
-    <div class="slide__bg" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&auto=format&q=80')"></div>
+    <div class="slide__bg" style="background-image: url('assets/img/anneken.jpg')"></div>
     <div class="slide__overlay"></div>
     <div class="slide__content slide__content--center">
-      <p class="slide__eyebrow">Forster — Ateliê de Conteúdo</p>
       <h1 class="slide__title slide__title--hero">Posicionamento Digital</h1>
       <p class="slide__subtitle">Movimento Curadoria e Projetos Culturais</p>
       <p class="slide__support">Uma estratégia de conteúdo para quem já tem história para contar.</p>
@@ -58,22 +57,24 @@
   </section>
 
   <!-- SEÇÃO 2 — QUEM SOMOS -->
-  <section class="slide slide--creme" id="quem-somos">
-    <div class="slide__content slide__content--center">
-      <div class="slide__divider slide__divider--center"></div>
-      <p class="slide__eyebrow slide__eyebrow--gold">Quem somos</p>
-      <h2 class="slide__title slide__title--dark">A Forster é um ateliê de conteúdo feito à mão.</h2>
-      <p class="slide__body slide__body--dark slide__body--center">Acreditamos que comunicação não é volume — é clareza, posicionamento e presença consistente.</p>
+  <section class="slide slide--split" id="quem-somos">
+    <div class="slide__image-half">
+      <img src="assets/img/forster-equipe.jpg" alt="Samuel e Silvana Forster" loading="lazy">
+    </div>
+    <div class="slide__text-half">
+      <p class="slide__eyebrow">Quem somos</p>
+      <h2 class="slide__title">A Forster Filmes é uma produtora familiar feita por quem acredita que o trabalho se adapta à filosofia de vida e não o contrário.</h2>
+      <p class="slide__body">A gente acredita no que faz.</p>
       <div class="slide__credits">
         <p><strong>Samuel Forster</strong> · Direção, captação e edição</p>
-        <p><strong>Silvana Forster</strong> · Estratégia, roteiro e calendário editorial</p>
+        <p><strong>Silvana Forster</strong> · Planejamento, roteiro e estratégia de conteúdo</p>
       </div>
     </div>
   </section>
 
   <!-- SEÇÃO 3 — O QUE VIMOS NA MOVIMENTO -->
   <section class="slide slide--cover" id="vimos">
-    <div class="slide__bg" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1920&auto=format&q=80')"></div>
+    <div class="slide__bg" style="background-image: url('assets/img/steinhaus.jpg')"></div>
     <div class="slide__overlay slide__overlay--heavy"></div>
     <div class="slide__content slide__content--center">
       <p class="slide__eyebrow">O que vimos na Movimento</p>
@@ -204,7 +205,7 @@
 
   <!-- SEÇÃO 6 — POR QUE FUNCIONA PARA A MOVIMENTO -->
   <section class="slide slide--cover" id="por-que">
-    <div class="slide__bg" style="background-image: url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1920&auto=format&q=80')"></div>
+    <div class="slide__bg" style="background-image: url('assets/img/petzinger.jpg')"></div>
     <div class="slide__overlay slide__overlay--heavy"></div>
     <div class="slide__content slide__content--center">
       <p class="slide__eyebrow">Por que isso funciona para a Movimento</p>
@@ -220,79 +221,16 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 7 — INVESTIMENTO -->
-  <section class="slide slide--creme" id="investimento">
-    <div class="slide__content slide__content--center">
-      <div class="slide__divider slide__divider--center"></div>
-      <p class="slide__eyebrow slide__eyebrow--gold">Investimento</p>
-      <h2 class="slide__title slide__title--dark">O que está incluído em cada opção.</h2>
-      <div class="compare-table-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th class="col-feature"></th>
-              <th class="col-a">Só a Estratégia</th>
-              <th class="col-b">Estratégia + Execução</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="cell-feature">Estratégia de posicionamento</td>
-              <td class="cell-a"><span class="compare-check">✓</span></td>
-              <td class="cell-b"><span class="compare-check">✓ inclusa</span></td>
-            </tr>
-            <tr>
-              <td class="cell-feature">Gravação bimestral (até 4h)</td>
-              <td class="cell-a"><span class="compare-dash">—</span></td>
-              <td class="cell-b"><span class="compare-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="cell-feature">8 reels por bimestre</td>
-              <td class="cell-a"><span class="compare-dash">—</span></td>
-              <td class="cell-b"><span class="compare-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="cell-feature">4 posts estáticos/mês</td>
-              <td class="cell-a"><span class="compare-dash">—</span></td>
-              <td class="cell-b"><span class="compare-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="cell-feature">Calendário editorial</td>
-              <td class="cell-a"><span class="compare-dash">—</span></td>
-              <td class="cell-b"><span class="compare-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="cell-feature">Reunião bimestral de alinhamento</td>
-              <td class="cell-a"><span class="compare-dash">—</span></td>
-              <td class="cell-b"><span class="compare-check">✓</span></td>
-            </tr>
-            <tr class="row-price">
-              <td class="cell-feature">Investimento</td>
-              <td class="cell-a">
-                <span class="compare-price">R$ 3.500</span>
-                <span class="compare-price-detail">Entrega única</span>
-              </td>
-              <td class="cell-b">
-                <span class="compare-price">R$ 2.000<small style="font-size:0.75em;font-family:'Source Sans 3',sans-serif;font-weight:400">/mês</small></span>
-                <span class="compare-price-detail">12 meses</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO 8 — ENCERRAMENTO + CTA -->
+  <!-- SEÇÃO 7 — ENCERRAMENTO + CTA -->
   <section class="slide slide--cover" id="encerramento">
-    <div class="slide__bg" style="background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920&auto=format&q=80')"></div>
+    <div class="slide__bg" style="background-image: url('assets/img/oktoberfest.jpg')"></div>
     <div class="slide__overlay slide__overlay--heavy"></div>
     <div class="slide__content slide__content--center">
-      <h2 class="slide__title slide__title--hero">A Movimento tem dez anos<br>de história para contar.</h2>
-      <p class="slide__subtitle">A gente ajuda isso a chegar às pessoas certas.</p>
+      <h2 class="slide__title slide__title--hero">A Movimento tem 10 anos<br>de história pra contar.</h2>
+      <p class="slide__subtitle">O próximo passo é seu.</p>
       <div class="contact">
         <p class="contact__name">Forster — Ateliê de Conteúdo</p>
-        <p class="contact__detail">Samuel Forster</p>
+        <p class="contact__detail">Silvana e Samuel Forster</p>
         <p class="contact__detail">samuel@forsterfilmes.com</p>
         <p class="contact__detail"><a href="https://wa.me/message/O6NXY5T2OHTZO1" target="_blank" rel="noopener noreferrer">(51) 98157-8225</a></p>
       </div>
