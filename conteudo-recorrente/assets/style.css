@@ -888,6 +888,23 @@ img {
     min-height: 100svh;
   }
 
+  /* #making-of: conteúdo (título + vídeo 9:16) ultrapassa 100vh no mobile */
+  #making-of {
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    padding: 4rem 0;
+  }
+
+  #making-of .making-video-wrap {
+    max-width: 340px;
+    overflow: hidden; /* mantém bordas arredondadas no vídeo */
+  }
+
+  #making-of .making-video-wrap video {
+    height: auto;
+  }
+
   .slide--creme,
   .slide--dark {
     min-height: auto;
