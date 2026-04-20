@@ -44,7 +44,7 @@ Seguir o CSS de `conteudo-recorrente/assets/style.css` como referência canônic
 | Cor de destaque | `#f0a500` (dourado Forster) |
 | Tipografia títulos | Sora |
 | Tipografia corpo | Inter |
-| Scroll | `scroll-snap-type: y mandatory` |
+| Scroll | livre (sem scroll snap) |
 | Altura de seção | `height: 100svh` |
 
 - Seções com conteúdo longo: usar duas colunas ou reduzir fonte para caber em `100svh` sem overflow.

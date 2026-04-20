@@ -26,7 +26,6 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -195,7 +194,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
   overflow: hidden;
 }
 
@@ -978,9 +976,6 @@ img {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  html {
-    scroll-snap-type: none;
-  }
 
   .slide {
     min-height: auto;
