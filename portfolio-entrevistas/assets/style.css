@@ -26,7 +26,7 @@
 }
 
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -180,6 +180,19 @@ img {
   justify-content: center;
   scroll-snap-align: start;
   overflow: hidden;
+}
+
+/* Seções com vídeo: content estica pra preencher a tela */
+.slide:has(.video-embed-wrap) {
+  align-items: stretch;
+}
+
+.slide__content:has(.video-embed-wrap) {
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
 }
 
 .slide__bg {
@@ -992,18 +1005,22 @@ img {
 }
 
 /* ==========================================================================
-   PORTFOLIO — Video embed responsivo 16:9
+   PORTFOLIO — Video embed
    ========================================================================== */
 
 .video-embed-wrap {
   width: 100%;
   max-width: 960px;
-  max-height: calc(100svh - 280px);
-  aspect-ratio: 16 / 9;
-  margin: 1.5rem auto 0;
+  flex: 1;
+  min-height: 0;
+  margin: 1rem auto 0;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.95s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.95s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .video-embed-wrap iframe {
@@ -1013,14 +1030,6 @@ img {
   border: none;
 }
 
-/* Animação do embed */
-.video-embed-wrap {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.95s cubic-bezier(0.25, 0.1, 0.25, 1),
-              transform 0.95s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
 .slide.is-visible .video-embed-wrap {
   opacity: 1;
   transform: translateY(0);
@@ -1028,7 +1037,18 @@ img {
 }
 
 @media (max-width: 768px) {
+  .slide:has(.video-embed-wrap) {
+    align-items: center;
+  }
+
+  .slide__content:has(.video-embed-wrap) {
+    height: auto;
+    justify-content: center;
+  }
+
   .video-embed-wrap {
+    flex: none;
+    aspect-ratio: 16 / 9;
     border-radius: 2px;
     margin-top: 1.75rem;
   }
