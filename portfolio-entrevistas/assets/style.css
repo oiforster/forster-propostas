@@ -173,8 +173,8 @@ img {
 .slide {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -878,14 +878,12 @@ img {
   }
 
   .slide {
-    min-height: auto;
+    height: auto;
   }
 
   .slide--cover {
     height: 100vh;
     height: 100svh;
-    min-height: 100vh;
-    min-height: 100svh;
   }
 
   /* #making-of: conteúdo (título + vídeo 9:16) ultrapassa 100vh no mobile */
@@ -907,7 +905,7 @@ img {
 
   .slide--creme,
   .slide--dark {
-    min-height: auto;
+    height: auto;
     padding: 3.5rem 0;
   }
 
@@ -1000,8 +998,9 @@ img {
 .video-embed-wrap {
   width: 100%;
   max-width: 960px;
+  max-height: calc(100svh - 280px);
   aspect-ratio: 16 / 9;
-  margin: 2.5rem auto 0;
+  margin: 1.5rem auto 0;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.32);
