@@ -1112,3 +1112,110 @@ img {
     padding: 1.75rem 1.25rem;
   }
 }
+
+/* ============================================
+   STACKED HORIZONTAL CARDS (Seção 5)
+   ============================================ */
+
+.options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 2.25rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.option-card--horizontal {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 1.85rem;
+  text-align: left;
+}
+
+.option-card--horizontal .option-card__title {
+  margin-top: 0.4rem;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.option-card--horizontal .option-card__tagline {
+  margin-top: 0.45rem;
+  font-size: 0.83rem;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.option-card--horizontal ul {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.option-card--horizontal ul li {
+  padding-left: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.option-card--horizontal ul li:last-child {
+  margin-bottom: 0;
+}
+
+.option-card--horizontal .option-card__price {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+  text-align: right;
+  align-self: center;
+}
+
+.option-card--horizontal .option-card__price-value {
+  font-size: 1.75rem;
+  line-height: 1.1;
+}
+
+.option-card--horizontal .option-card__price-detail {
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+}
+
+/* ============================================
+   THREE-COLUMN GRID (Seção 6 simulações)
+   ============================================ */
+
+.options-grid--three {
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1100px;
+}
+
+.options-grid--three .option-card {
+  padding: 2rem 1.65rem;
+}
+
+.options-grid--three .option-card__title {
+  font-size: 1.5rem;
+}
+
+.options-grid--three .option-card__tagline {
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 920px) {
+  .option-card--horizontal {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem;
+  }
+  .option-card--horizontal .option-card__price {
+    text-align: left;
+  }
+  .options-grid--three {
+    grid-template-columns: 1fr;
+  }
+}
