@@ -125,4 +125,34 @@ Incluir sempre no `<head>` de todo `index.html`:
 | Exemplo com making of | `movimento/index.html` |
 | Exemplo com imóveis | `olimoveis/index.html` |
 | Exemplo com feed | `veadrigo/index.html` |
+| Exemplo sessão avulsa | `producao-de-videos/index.html` |
 | Vocabulário de marca | `SynologyDrive-Agencia/CLAUDE.md` (seção Rebranding FORSTER) |
+
+---
+
+## 9. PADRÃO SESSÃO AVULSA (producao-de-videos)
+
+Proposta para serviço pontual, sem contrato recorrente. Difere da proposta padrão em:
+
+- **Seção "Como começamos" removida** — não há onboarding em etapas, o processo é linear e único.
+- **Seção de portfólio** usa galeria de reels (cards clicáveis com thumbnail local), não grid de feeds do Instagram.
+- **Plano único** centralizado em vez de três cards comparativos.
+- **Thumbnails dos reels** devem ser baixadas localmente via microlink e salvas em `assets/img/thumb-N.jpg`. Nunca usar microlink como src em produção (rate limit do plano free).
+- **Estrutura de arquivos:** o `index.html` referencia assets de `conteudo-recorrente/assets/` via path relativo (`../conteudo-recorrente/assets/img/`). Não duplicar arquivos pesados.
+
+---
+
+## 10. PERFORMANCE
+
+Padrões obrigatórios para todos os arquivos de assets:
+
+| Asset | Formato | Tamanho máximo |
+|---|---|---|
+| Hero background | JPG ou WebP | 600 KB |
+| Fotos de seção | JPG | 300 KB |
+| Vídeo autoplay (making of) | MP4 H.264, sem áudio, faststart | 15 MB |
+| Thumbnails de reel | JPG local | 100 KB |
+
+- Converter PNG para JPG com `ffmpeg -i foto.png -q:v 4 foto.jpg`
+- Comprimir vídeo com `ffmpeg -i video.mov -c:v libx264 -crf 26 -preset medium -an -movflags +faststart video.mp4`
+- Nunca subir arquivos `.mov` como asset de produção.
